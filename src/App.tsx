@@ -1,5 +1,5 @@
 import React, { FC } from "react";
 
 export const App: FC = () => {
-  return <div>Romeo Personal Finance Manager</div>;
+  return <div>Test Application in Dev</div>;
 };
