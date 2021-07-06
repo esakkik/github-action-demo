@@ -5,6 +5,6 @@ import { App } from "./App";
 describe("MAIN::APP", () => {
   it("basic rendering", () => {
     const { getByText } = render(<App />);
-    expect(getByText("Romeo Personal Finance Manager")).toBeDefined();
+    expect(getByText("Test Application in Dev")).toBeDefined();
   });
 });
