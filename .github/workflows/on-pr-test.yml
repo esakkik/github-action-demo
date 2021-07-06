@@ -1,0 +1,13 @@
+name: Github Action Demo Pull Request
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  test_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - run: npm ci
+      - run: npm test
