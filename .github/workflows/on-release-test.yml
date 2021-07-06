@@ -17,5 +17,6 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: tar -czvf dist.tar.gz dist/
         with:
-          files: dist/
+          files: dist.tar.gz
