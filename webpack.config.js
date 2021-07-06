@@ -6,10 +6,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const safePostCssParser = require('postcss-safe-parser');
 const TerserPlugin = require('terser-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const reactRefreshBabel = require('react-refresh/babel');
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+// const reactRefreshBabel = require('react-refresh/babel');
+// const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const ROOT = path.resolve(__dirname, ".");
 const SOURCE = path.join(ROOT, "src");
@@ -119,7 +119,7 @@ const typescriptLoader = {
           loader: 'babel-loader',
           options: {
               plugins: [
-                  !IS_PROD && reactRefreshBabel,
+                  !IS_PROD && undefined,
               ].filter(Boolean),
           }
       }
