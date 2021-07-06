@@ -9,8 +9,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build Artifacts
         uses: actions/setup-node@v2
-        env:
-          NODE_ENV: production
       - run: npm ci
       - run: npm test
       - run: npm run build
