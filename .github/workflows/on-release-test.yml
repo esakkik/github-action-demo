@@ -4,13 +4,14 @@ jobs:
   build_release:
     runs-on: ubuntu-latest
     steps:
-      - name: Build Artifacts
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Build Artifacts
+        uses: actions/setup-node@v2
       - run: npm ci
       - run: npm test
       - run: npm run build
-      - uses: softprops/action-gh-release@v1
+      - name: Upload Artifacts
+        uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
