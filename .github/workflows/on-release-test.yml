@@ -1,5 +1,8 @@
 name: Github Release Management
-on: release
+on:
+  release:
+    types:
+      - "released"
 jobs:
   build_release:
     runs-on: ubuntu-latest
