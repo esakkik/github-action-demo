@@ -13,7 +13,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const ROOT = path.resolve(__dirname, ".");
 const SOURCE = path.join(ROOT, "src");
-const DEST = path.join(ROOT, "build");
+const DEST = path.join(ROOT, "dist");
 
 const IS_PROD = process.env.NODE_ENV === 'production';
 const PORT = process.env.PORT || 3000;
